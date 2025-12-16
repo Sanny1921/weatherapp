@@ -55,7 +55,7 @@ async function getdata() {
     let res= await fetch(url)
     let data= await res.json()
     job(data)
-    setBackground(data)
+    
   } catch (error) {
     fill()
   }
@@ -74,49 +74,8 @@ async function showdefault() {
     let res= await fetch(url)
     let data= await res.json()
     job(data)
-    setBackground(data)
   } catch (error) {
     fill()
   }
 }
 showdefault()
-
-
-
-
-
-
-
-function setBackground(data) {
-  const condition = data.weather[0].main;
-  const icon = data.weather[0].icon;
-
-  const container = document.querySelector(".show");
-
-  // remove old classes
-  container.classList.remove(
-    "sunny",
-    "night",
-    "cloudy",
-    "rainy",
-    "foggy"
-  );
-
-  if (condition === "Clear") {
-    container.classList.add(
-      icon.endsWith("d") ? "sunny" : "night"
-    );
-  }
-
-  else if (condition === "Clouds"){
-    container.classList.add("cloudy");
-  }
-
-  else if (condition === "Rain" || condition === "Drizzle"){
-    container.classList.add("rainy");
-  }
-
-  else if (condition === "Haze" || condition === "Mist" || condition === "Fog"){
-    container.classList.add("foggy");
-  }
-}
