@@ -17,26 +17,6 @@
 
 
 
-.show.sunny {
-  background: linear-gradient(#4facfe, #00f2fe);
-}
-
-.show.night {
-  background: linear-gradient(#141E30, #243B55);
-}
-
-.show.cloudy {
-  background: linear-gradient(#bdc3c7, #2c3e50);
-}
-
-.show.rainy {
-  background: linear-gradient(#4b79a1, #283e51);
-}
-
-.show.foggy {
-  background: linear-gradient(#757F9A, #D7DDE8);
-}
-
 #output{
   position: fixed;
   top:50px;
@@ -70,4 +50,5 @@ input::placeholder{
 #wea img{
   width:30px;
   margin-bottom: -10px;
+
 }
