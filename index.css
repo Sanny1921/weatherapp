@@ -1,3 +1,7 @@
+body{
+  background-color:black;
+}
+
 #full{
   height: calc(100vh - 10vh);
   display: flex;
@@ -52,3 +56,4 @@ input::placeholder{
   margin-bottom: -10px;
 
 }
+
