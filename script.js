@@ -18,7 +18,7 @@ let pressure=document.getElementById('pressure')
 let visi=document.getElementById('visibility')
 let wind= document.getElementById('wind')
 
-function fill() {
+function fill(err) {
   cityout.textContent= `server error can't load`
   tem.textContent=``
   feltem.textContent= ``
@@ -28,6 +28,7 @@ function fill() {
   wind.textContent=``
   mau.textContent=``
   console.log("error hai")
+  console.log(err)
 }
 
 function job(data) {
@@ -79,3 +80,4 @@ async function showdefault() {
   }
 }
 showdefault()
+
