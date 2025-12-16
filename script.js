@@ -42,7 +42,7 @@ function job(data) {
     visi.textContent=`visibility: ${Number(data.visibility)/1000} km`
     let winddata= (Number(data.wind.speed)*3.6).toFixed(1)
     wind.textContent= `wind speed: ${winddata} km/h`
-    mau.textContent=`${data.weather[0].main}, ${data.weather[0].description}`
+    mau.textContent=`Weather: ${data.weather[0].main}, ${data.weather[0].description}`
     icon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`
     mau.appendChild(icon)
 }
@@ -80,4 +80,5 @@ async function showdefault() {
   }
 }
 showdefault()
+
 
