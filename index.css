@@ -1,5 +1,5 @@
 body{
-  background-color:black;
+  /* background-color:black; */
 }
 
 #full{
@@ -56,4 +56,5 @@ input::placeholder{
   margin-bottom: -10px;
 
 }
+
 
